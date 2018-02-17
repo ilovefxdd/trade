@@ -1,0 +1,76 @@
+C:\PIVAS worker\SrEthernetSample\obj\Debug\ResolveAssemblyReference.cache
+C:\PIVAS worker\SrEthernetSample\obj\Debug\SrEthernetSample.Form1.resources
+C:\PIVAS worker\SrEthernetSample\obj\Debug\PIVAS_worker.Properties.Resources.resources
+C:\PIVAS worker\SrEthernetSample\obj\Debug\GenerateResource.read.1.tlog
+C:\PIVAS worker\SrEthernetSample\obj\Debug\GenerateResource.write.1.tlog
+C:\PIVAS worker\SrEthernetSample\bin\Debug\PIVAS worker.exe.config
+C:\PIVAS worker\SrEthernetSample\bin\Debug\PIVAS worker.exe
+C:\PIVAS worker\SrEthernetSample\bin\Debug\PIVAS worker.pdb
+C:\PIVAS worker\SrEthernetSample\bin\Debug\BarcodeReaderControl.dll
+C:\PIVAS worker\SrEthernetSample\bin\Debug\Communication.dll
+C:\PIVAS worker\SrEthernetSample\bin\Debug\Readers.dll
+C:\PIVAS worker\SrEthernetSample\bin\Debug\VncClientControl.dll
+C:\PIVAS worker\SrEthernetSample\bin\Debug\SrUsbAdapterApi.dll
+C:\PIVAS worker\SrEthernetSample\bin\Debug\CommonUtility.dll
+C:\PIVAS worker\SrEthernetSample\obj\Debug\PIVAS worker.exe
+C:\PIVAS worker\SrEthernetSample\obj\Debug\PIVAS worker.pdb
+C:\PIVAS worker\PIVAS worker\bin\Debug\PIVAS worker.exe.config
+C:\PIVAS worker\PIVAS worker\obj\Debug\PIVAS worker.exe
+C:\PIVAS worker\PIVAS worker\obj\Debug\PIVAS worker.pdb
+C:\PIVAS worker\PIVAS worker\bin\Debug\PIVAS worker.exe
+C:\PIVAS worker\PIVAS worker\bin\Debug\PIVAS worker.pdb
+C:\PIVAS worker\PIVAS worker\bin\Debug\BarcodeReaderControl.dll
+C:\PIVAS worker\PIVAS worker\bin\Debug\Communication.dll
+C:\PIVAS worker\PIVAS worker\bin\Debug\Readers.dll
+C:\PIVAS worker\PIVAS worker\bin\Debug\VncClientControl.dll
+C:\PIVAS worker\PIVAS worker\bin\Debug\SrUsbAdapterApi.dll
+C:\PIVAS worker\PIVAS worker\bin\Debug\CommonUtility.dll
+C:\PIVAS worker\PIVAS worker\obj\Debug\ResolveAssemblyReference.cache
+C:\PIVAS worker\PIVAS worker\obj\Debug\PIVAS_worker.Properties.Resources.resources
+C:\PIVAS worker\PIVAS worker\obj\Debug\GenerateResource.read.1.tlog
+C:\PIVAS worker\PIVAS worker\obj\Debug\GenerateResource.write.1.tlog
+D:\PIVAS worker\PIVAS worker\bin\Debug\PIVAS worker.exe.config
+D:\PIVAS worker\PIVAS worker\obj\Debug\PIVAS worker.exe
+D:\PIVAS worker\PIVAS worker\obj\Debug\PIVAS worker.pdb
+D:\PIVAS worker\PIVAS worker\bin\Debug\PIVAS worker.exe
+D:\PIVAS worker\PIVAS worker\bin\Debug\PIVAS worker.pdb
+D:\PIVAS worker\PIVAS worker\bin\Debug\Communication.dll
+D:\PIVAS worker\PIVAS worker\bin\Debug\Readers.dll
+D:\PIVAS worker\PIVAS worker\bin\Debug\VncClientControl.dll
+D:\PIVAS worker\PIVAS worker\bin\Debug\SrUsbAdapterApi.dll
+D:\PIVAS worker\PIVAS worker\bin\Debug\CommonUtility.dll
+D:\PIVAS worker\PIVAS worker\obj\Debug\PIVAS worker.csprojResolveAssemblyReference.cache
+D:\PIVAS worker\PIVAS worker\obj\Debug\PIVAS_worker.Properties.Resources.resources
+D:\PIVAS worker\PIVAS worker\obj\Debug\PIVAS worker.csproj.GenerateResource.Cache
+D:\PIVAS worker\PIVAS worker\obj\Debug\PIVASWork.Form1.resources
+C:\PIVAS worker\PIVAS worker\obj\Debug\PIVASWork.Form1.resources
+G:\PIVAS worker\bin\Debug\PIVAS worker.exe.config
+G:\PIVAS worker\obj\Debug\PIVAS worker.exe
+G:\PIVAS worker\obj\Debug\PIVAS worker.pdb
+G:\PIVAS worker\bin\Debug\PIVAS worker.exe
+G:\PIVAS worker\bin\Debug\PIVAS worker.pdb
+G:\PIVAS worker\bin\Debug\BarcodeReaderControl.dll
+G:\PIVAS worker\bin\Debug\Communication.dll
+G:\PIVAS worker\bin\Debug\Readers.dll
+G:\PIVAS worker\bin\Debug\VncClientControl.dll
+G:\PIVAS worker\bin\Debug\SrUsbAdapterApi.dll
+G:\PIVAS worker\bin\Debug\CommonUtility.dll
+G:\PIVAS worker\obj\Debug\ResolveAssemblyReference.cache
+G:\PIVAS worker\obj\Debug\PIVASWork.Form1.resources
+G:\PIVAS worker\obj\Debug\PIVAS_worker.Properties.Resources.resources
+G:\PIVAS worker\obj\Debug\GenerateResource.read.1.tlog
+G:\PIVAS worker\obj\Debug\GenerateResource.write.1.tlog
+E:\PIVAS worker\bin\Debug\PIVAS worker.exe.config
+E:\PIVAS worker\obj\Debug\PIVAS worker.exe
+E:\PIVAS worker\obj\Debug\PIVAS worker.pdb
+E:\PIVAS worker\bin\Debug\PIVAS worker.exe
+E:\PIVAS worker\bin\Debug\PIVAS worker.pdb
+E:\PIVAS worker\bin\Debug\Communication.dll
+E:\PIVAS worker\bin\Debug\Readers.dll
+E:\PIVAS worker\bin\Debug\VncClientControl.dll
+E:\PIVAS worker\bin\Debug\SrUsbAdapterApi.dll
+E:\PIVAS worker\bin\Debug\CommonUtility.dll
+E:\PIVAS worker\obj\Debug\PIVAS worker.csprojResolveAssemblyReference.cache
+E:\PIVAS worker\obj\Debug\PIVASWork.Form1.resources
+E:\PIVAS worker\obj\Debug\PIVAS_worker.Properties.Resources.resources
+E:\PIVAS worker\obj\Debug\PIVAS worker.csproj.GenerateResource.Cache

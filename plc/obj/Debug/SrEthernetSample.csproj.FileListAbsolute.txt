@@ -1,0 +1,2 @@
+C:\PIVAS worker\SrEthernetSample\bin\Debug\SrEthernetSample.exe.config
+C:\PIVAS worker\SrEthernetSample\bin\Debug\PIVAS worker.exe.config

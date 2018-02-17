@@ -1,0 +1,239 @@
+E:\PIVAS worker\obj\Debug\PIVASWork.Form1.resources
+E:\PIVAS worker\bin\Debug\PIVASworker.exe.config
+E:\PIVAS worker\obj\Debug\PIVASworker.Properties.Resources.resources
+E:\PIVAS worker\bin\Debug\PIVASworker.exe
+E:\PIVAS worker\bin\Debug\PIVASworker.pdb
+E:\PIVAS worker\bin\Debug\Communication.dll
+E:\PIVAS worker\bin\Debug\Readers.dll
+E:\PIVAS worker\bin\Debug\VncClientControl.dll
+E:\PIVAS worker\bin\Debug\SrUsbAdapterApi.dll
+E:\PIVAS worker\bin\Debug\CommonUtility.dll
+E:\PIVAS worker\obj\Debug\PIVASworker.exe
+E:\PIVAS worker\obj\Debug\PIVASworker.pdb
+E:\PIVAS worker\bin\Debug\BarcodeReaderControl.dll
+E:\PIVAS worker\obj\Debug\ResolveAssemblyReference.cache
+E:\PIVAS worker\obj\Debug\GenerateResource.read.1.tlog
+E:\PIVAS worker\obj\Debug\GenerateResource.write.1.tlog
+D:\PIVAS worker\PIVAS worker\bin\Debug\PIVASworker.exe.config
+D:\PIVAS worker\PIVAS worker\obj\Debug\PIVASworker.exe
+D:\PIVAS worker\PIVAS worker\obj\Debug\PIVASworker.pdb
+D:\PIVAS worker\PIVAS worker\bin\Debug\PIVASworker.exe
+D:\PIVAS worker\PIVAS worker\bin\Debug\PIVASworker.pdb
+D:\PIVAS worker\PIVAS worker\bin\Debug\Communication.dll
+D:\PIVAS worker\PIVAS worker\bin\Debug\Readers.dll
+D:\PIVAS worker\PIVAS worker\bin\Debug\VncClientControl.dll
+D:\PIVAS worker\PIVAS worker\bin\Debug\SrUsbAdapterApi.dll
+D:\PIVAS worker\PIVAS worker\bin\Debug\CommonUtility.dll
+D:\PIVAS worker\PIVAS worker\obj\Debug\PIVASworker.csprojResolveAssemblyReference.cache
+D:\PIVAS worker\PIVAS worker\obj\Debug\PIVASWork.Form1.resources
+D:\PIVAS worker\PIVAS worker\obj\Debug\PIVASworker.Properties.Resources.resources
+D:\PIVAS worker\PIVAS worker\obj\Debug\PIVASworker.csproj.GenerateResource.Cache
+C:\PIVAS worker\pivas\obj\Debug\PIVASworker.exe
+C:\PIVAS worker\pivas\obj\Debug\PIVASworker.pdb
+C:\PIVAS worker\pivas\bin\Debug\PIVASworker.exe.config
+C:\PIVAS worker\pivas\bin\Debug\PIVASworker.exe
+C:\PIVAS worker\pivas\bin\Debug\PIVASworker.pdb
+C:\PIVAS worker\pivas\bin\Debug\BarcodeReaderControl.dll
+C:\PIVAS worker\pivas\bin\Debug\Communication.dll
+C:\PIVAS worker\pivas\bin\Debug\Readers.dll
+C:\PIVAS worker\pivas\bin\Debug\VncClientControl.dll
+C:\PIVAS worker\pivas\bin\Debug\SrUsbAdapterApi.dll
+C:\PIVAS worker\pivas\bin\Debug\CommonUtility.dll
+C:\PIVAS worker\pivas\obj\Debug\ResolveAssemblyReference.cache
+C:\PIVAS worker\pivas\obj\Debug\PIVASWork.Form1.resources
+C:\PIVAS worker\pivas\obj\Debug\PIVASworker.Properties.Resources.resources
+C:\PIVAS worker\pivas\obj\Debug\GenerateResource.read.1.tlog
+C:\PIVAS worker\pivas\obj\Debug\GenerateResource.write.1.tlog
+E:\pivas\bin\Debug\PIVASworker.exe.config
+E:\pivas\obj\Debug\PIVASworker.exe
+E:\pivas\obj\Debug\PIVASworker.pdb
+E:\pivas\bin\Debug\PIVASworker.exe
+E:\pivas\bin\Debug\PIVASworker.pdb
+E:\pivas\bin\Debug\Communication.dll
+E:\pivas\bin\Debug\Readers.dll
+E:\pivas\bin\Debug\VncClientControl.dll
+E:\pivas\bin\Debug\SrUsbAdapterApi.dll
+E:\pivas\bin\Debug\CommonUtility.dll
+E:\pivas\obj\Debug\PIVASworker.Properties.Resources.resources
+E:\pivas\obj\Debug\PIVASWork.main.resources
+E:\pivas\bin\Debug\zxing.dll
+D:\pivas\bin\Debug\PIVASworker.exe.config
+D:\pivas\obj\Debug\PIVASworker.exe
+D:\pivas\obj\Debug\PIVASworker.pdb
+D:\pivas\bin\Debug\PIVASworker.exe
+D:\pivas\bin\Debug\PIVASworker.pdb
+D:\pivas\bin\Debug\zxing.dll
+D:\pivas\bin\Debug\Communication.dll
+D:\pivas\bin\Debug\Readers.dll
+D:\pivas\bin\Debug\VncClientControl.dll
+D:\pivas\bin\Debug\SrUsbAdapterApi.dll
+D:\pivas\bin\Debug\CommonUtility.dll
+D:\pivas\obj\Debug\ResolveAssemblyReference.cache
+D:\pivas\obj\Debug\PIVASWork.main.resources
+D:\pivas\obj\Debug\PIVASworker.Properties.Resources.resources
+D:\pivas\obj\Debug\GenerateResource.read.1.tlog
+D:\pivas\obj\Debug\GenerateResource.write.1.tlog
+E:\pivas\obj\Debug\PIVASworker.seting.resources
+E:\pivas\obj\Debug\PIVASworker.csprojResolveAssemblyReference.cache
+E:\pivas\obj\Debug\PIVASworker.csproj.GenerateResource.Cache
+C:\pivas\bin\Debug\PIVASworker.exe.config
+C:\pivas\obj\Debug\PIVASworker.exe
+C:\pivas\obj\Debug\PIVASworker.pdb
+C:\pivas\bin\Debug\PIVASworker.exe
+C:\pivas\bin\Debug\PIVASworker.pdb
+C:\pivas\bin\Debug\BarcodeReaderControl.dll
+C:\pivas\bin\Debug\zxing.dll
+C:\pivas\bin\Debug\Communication.dll
+C:\pivas\bin\Debug\Readers.dll
+C:\pivas\bin\Debug\VncClientControl.dll
+C:\pivas\bin\Debug\SrUsbAdapterApi.dll
+C:\pivas\bin\Debug\CommonUtility.dll
+C:\pivas\obj\Debug\ResolveAssemblyReference.cache
+C:\pivas\obj\Debug\PIVASWork.main.resources
+C:\pivas\obj\Debug\PIVASworker.Properties.Resources.resources
+C:\pivas\obj\Debug\PIVASworker.seting.resources
+C:\pivas\obj\Debug\GenerateResource.read.1.tlog
+C:\pivas\obj\Debug\GenerateResource.write.1.tlog
+G:\pivas\bin\Debug\PIVASworker.exe.config
+G:\pivas\obj\Debug\PIVASworker.exe
+G:\pivas\obj\Debug\PIVASworker.pdb
+E:\pivas push\bin\Debug\PIVASworker.exe.config
+E:\pivas push\obj\Debug\PIVASworker.exe
+E:\pivas push\obj\Debug\PIVASworker.pdb
+E:\pivas push\bin\Debug\PIVASworker.exe
+E:\pivas push\bin\Debug\PIVASworker.pdb
+E:\pivas push\bin\Debug\zxing.dll
+E:\pivas push\bin\Debug\Communication.dll
+E:\pivas push\bin\Debug\Readers.dll
+E:\pivas push\bin\Debug\VncClientControl.dll
+E:\pivas push\bin\Debug\SrUsbAdapterApi.dll
+E:\pivas push\bin\Debug\CommonUtility.dll
+E:\pivas push\obj\Debug\PIVASWork.main.resources
+E:\pivas push\obj\Debug\PIVASworker.Properties.Resources.resources
+E:\pivas push\obj\Debug\PIVASworker.seting.resources
+G:\pivas push\bin\Debug\PIVASworker.exe.config
+G:\pivas push\obj\Debug\PIVASworker.exe
+G:\pivas push\obj\Debug\PIVASworker.pdb
+G:\pivas push\obj\Debug\ResolveAssemblyReference.cache
+G:\pivas push\obj\Debug\PIVASWork.main.resources
+G:\pivas push\obj\Debug\PIVASworker.Properties.Resources.resources
+G:\pivas push\obj\Debug\PIVASworker.seting.resources
+G:\pivas push\obj\Debug\GenerateResource.read.1.tlog
+G:\pivas push\obj\Debug\GenerateResource.write.1.tlog
+G:\pivas push\bin\Debug\PIVASworker.exe
+G:\pivas push\bin\Debug\PIVASworker.pdb
+G:\pivas push\bin\Debug\BarcodeReaderControl.dll
+G:\pivas push\bin\Debug\zxing.dll
+G:\pivas push\bin\Debug\Communication.dll
+G:\pivas push\bin\Debug\Readers.dll
+G:\pivas push\bin\Debug\VncClientControl.dll
+G:\pivas push\bin\Debug\SrUsbAdapterApi.dll
+G:\pivas push\bin\Debug\CommonUtility.dll
+D:\TDDOWNLOAD\pivas push\bin\Debug\PIVASworker.exe.config
+D:\TDDOWNLOAD\pivas push\obj\Debug\PIVASworker.exe
+D:\TDDOWNLOAD\pivas push\obj\Debug\PIVASworker.pdb
+D:\TDDOWNLOAD\pivas push\bin\Debug\PIVASworker.exe
+D:\TDDOWNLOAD\pivas push\bin\Debug\PIVASworker.pdb
+D:\TDDOWNLOAD\pivas push\bin\Debug\BarcodeReaderControl.dll
+D:\TDDOWNLOAD\pivas push\bin\Debug\zxing.dll
+D:\TDDOWNLOAD\pivas push\bin\Debug\Communication.dll
+D:\TDDOWNLOAD\pivas push\bin\Debug\Readers.dll
+D:\TDDOWNLOAD\pivas push\bin\Debug\VncClientControl.dll
+D:\TDDOWNLOAD\pivas push\bin\Debug\SrUsbAdapterApi.dll
+D:\TDDOWNLOAD\pivas push\bin\Debug\CommonUtility.dll
+D:\TDDOWNLOAD\pivas push\obj\Debug\ResolveAssemblyReference.cache
+D:\TDDOWNLOAD\pivas push\obj\Debug\PIVASWork.main.resources
+D:\TDDOWNLOAD\pivas push\obj\Debug\PIVASworker.Properties.Resources.resources
+D:\TDDOWNLOAD\pivas push\obj\Debug\PIVASworker.seting.resources
+D:\TDDOWNLOAD\pivas push\obj\Debug\GenerateResource.read.1.tlog
+D:\TDDOWNLOAD\pivas push\obj\Debug\GenerateResource.write.1.tlog
+E:\pivas push\obj\Debug\ResolveAssemblyReference.cache
+E:\pivas push\obj\Debug\GenerateResource.read.1.tlog
+E:\pivas push\obj\Debug\GenerateResource.write.1.tlog
+G:\plc\bin\Debug\PIVASworker.exe.config
+G:\plc\obj\Debug\PIVASworker.exe
+G:\plc\obj\Debug\PIVASworker.pdb
+G:\plc\bin\Debug\PIVASworker.exe
+G:\plc\bin\Debug\PIVASworker.pdb
+G:\plc\bin\Debug\BarcodeReaderControl.dll
+G:\plc\bin\Debug\zxing.dll
+G:\plc\bin\Debug\Communication.dll
+G:\plc\bin\Debug\Readers.dll
+G:\plc\bin\Debug\VncClientControl.dll
+G:\plc\bin\Debug\SrUsbAdapterApi.dll
+G:\plc\bin\Debug\CommonUtility.dll
+G:\plc\obj\Debug\ResolveAssemblyReference.cache
+G:\plc\obj\Debug\PIVASWork.main.resources
+G:\plc\obj\Debug\PIVASworker.Properties.Resources.resources
+G:\plc\obj\Debug\PIVASworker.seting.resources
+G:\plc\obj\Debug\GenerateResource.read.1.tlog
+G:\plc\obj\Debug\GenerateResource.write.1.tlog
+H:\plc\bin\Debug\PIVASworker.exe.config
+H:\plc\obj\Debug\PIVASworker.exe
+H:\plc\obj\Debug\PIVASworker.pdb
+H:\plc\bin\Debug\PIVASworker.exe
+H:\plc\bin\Debug\PIVASworker.pdb
+H:\plc\bin\Debug\zxing.dll
+H:\plc\bin\Debug\Communication.dll
+H:\plc\bin\Debug\Readers.dll
+H:\plc\bin\Debug\VncClientControl.dll
+H:\plc\bin\Debug\SrUsbAdapterApi.dll
+H:\plc\bin\Debug\CommonUtility.dll
+H:\plc\obj\Debug\ResolveAssemblyReference.cache
+H:\plc\obj\Debug\PIVASWork.main.resources
+H:\plc\obj\Debug\PIVASworker.Properties.Resources.resources
+H:\plc\obj\Debug\PIVASworker.seting.resources
+H:\plc\obj\Debug\GenerateResource.read.1.tlog
+H:\plc\obj\Debug\GenerateResource.write.1.tlog
+D:\TDDOWNLOAD\plc714\plc\bin\Debug\PIVASworker.exe.config
+D:\TDDOWNLOAD\plc714\plc\obj\Debug\PIVASworker.exe
+D:\TDDOWNLOAD\plc714\plc\obj\Debug\PIVASworker.pdb
+D:\TDDOWNLOAD\plc714\plc\bin\Debug\PIVASworker.exe
+D:\TDDOWNLOAD\plc714\plc\bin\Debug\PIVASworker.pdb
+D:\TDDOWNLOAD\plc714\plc\bin\Debug\BarcodeReaderControl.dll
+D:\TDDOWNLOAD\plc714\plc\bin\Debug\zxing.dll
+D:\TDDOWNLOAD\plc714\plc\bin\Debug\Communication.dll
+D:\TDDOWNLOAD\plc714\plc\bin\Debug\Readers.dll
+D:\TDDOWNLOAD\plc714\plc\bin\Debug\VncClientControl.dll
+D:\TDDOWNLOAD\plc714\plc\bin\Debug\SrUsbAdapterApi.dll
+D:\TDDOWNLOAD\plc714\plc\bin\Debug\CommonUtility.dll
+D:\TDDOWNLOAD\plc714\plc\obj\Debug\ResolveAssemblyReference.cache
+D:\TDDOWNLOAD\plc714\plc\obj\Debug\PIVASWork.main.resources
+D:\TDDOWNLOAD\plc714\plc\obj\Debug\PIVASworker.Properties.Resources.resources
+D:\TDDOWNLOAD\plc714\plc\obj\Debug\PIVASworker.seting.resources
+D:\TDDOWNLOAD\plc714\plc\obj\Debug\GenerateResource.read.1.tlog
+D:\TDDOWNLOAD\plc714\plc\obj\Debug\GenerateResource.write.1.tlog
+D:\TDDOWNLOAD\plc3id\plc714\plc\bin\Debug\PIVASworker.exe.config
+D:\TDDOWNLOAD\plc3id\plc714\plc\obj\Debug\PIVASworker.exe
+D:\TDDOWNLOAD\plc3id\plc714\plc\obj\Debug\PIVASworker.pdb
+D:\TDDOWNLOAD\plc3id\plc714\plc\bin\Debug\PIVASworker.exe
+D:\TDDOWNLOAD\plc3id\plc714\plc\bin\Debug\PIVASworker.pdb
+D:\TDDOWNLOAD\plc3id\plc714\plc\bin\Debug\BarcodeReaderControl.dll
+D:\TDDOWNLOAD\plc3id\plc714\plc\bin\Debug\zxing.dll
+D:\TDDOWNLOAD\plc3id\plc714\plc\bin\Debug\Communication.dll
+D:\TDDOWNLOAD\plc3id\plc714\plc\bin\Debug\Readers.dll
+D:\TDDOWNLOAD\plc3id\plc714\plc\bin\Debug\VncClientControl.dll
+D:\TDDOWNLOAD\plc3id\plc714\plc\bin\Debug\SrUsbAdapterApi.dll
+D:\TDDOWNLOAD\plc3id\plc714\plc\bin\Debug\CommonUtility.dll
+D:\TDDOWNLOAD\plc3id\plc714\plc\obj\Debug\ResolveAssemblyReference.cache
+D:\TDDOWNLOAD\plc3id\plc714\plc\obj\Debug\PIVASWork.main.resources
+D:\TDDOWNLOAD\plc3id\plc714\plc\obj\Debug\PIVASworker.Properties.Resources.resources
+D:\TDDOWNLOAD\plc3id\plc714\plc\obj\Debug\PIVASworker.seting.resources
+D:\TDDOWNLOAD\plc3id\plc714\plc\obj\Debug\GenerateResource.read.1.tlog
+D:\TDDOWNLOAD\plc3id\plc714\plc\obj\Debug\GenerateResource.write.1.tlog
+F:\BaiduYunDownload\plc3id\plc714\plc\bin\Debug\PIVASworker.exe.config
+F:\BaiduYunDownload\plc3id\plc714\plc\obj\Debug\PIVASworker.exe
+F:\BaiduYunDownload\plc3id\plc714\plc\obj\Debug\PIVASworker.pdb
+F:\BaiduYunDownload\plc3id\plc714\plc\bin\Debug\PIVASworker.exe
+F:\BaiduYunDownload\plc3id\plc714\plc\bin\Debug\PIVASworker.pdb
+F:\BaiduYunDownload\plc3id\plc714\plc\bin\Debug\zxing.dll
+F:\BaiduYunDownload\plc3id\plc714\plc\bin\Debug\Communication.dll
+F:\BaiduYunDownload\plc3id\plc714\plc\bin\Debug\Readers.dll
+F:\BaiduYunDownload\plc3id\plc714\plc\bin\Debug\VncClientControl.dll
+F:\BaiduYunDownload\plc3id\plc714\plc\bin\Debug\SrUsbAdapterApi.dll
+F:\BaiduYunDownload\plc3id\plc714\plc\bin\Debug\CommonUtility.dll
+F:\BaiduYunDownload\plc3id\plc714\plc\obj\Debug\PIVASworker.csprojResolveAssemblyReference.cache
+F:\BaiduYunDownload\plc3id\plc714\plc\obj\Debug\PIVASWork.main.resources
+F:\BaiduYunDownload\plc3id\plc714\plc\obj\Debug\PIVASworker.Properties.Resources.resources
+F:\BaiduYunDownload\plc3id\plc714\plc\obj\Debug\PIVASworker.seting.resources
+F:\BaiduYunDownload\plc3id\plc714\plc\obj\Debug\PIVASworker.csproj.GenerateResource.Cache
