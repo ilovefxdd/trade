@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>MainWindow</class>
+  <widget class="QMainWindow" name="MainWindow">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1380</width>
+        <height>853</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>MainWindow</string>
+    </property>
+    <widget class="QWidget" name="centralWidget">
+      <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+          <widget class="QTabWidget" name="tabWidget">
+            <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+              <bool>true</bool>
+            </property>
+            <property name="tabPosition">
+              <enum>QTabWidget::North</enum>
+            </property>
+            <property name="currentIndex">
+              <number>0</number>
+            </property>
+            <widget class="QWidget" name="tab_3">
+              <property name="maximumSize">
+                <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                </size>
+              </property>
+              <property name="styleSheet">
+                <string notr="true"/>
+              </property>
+              <attribute name="title">
+                <string>页</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+            </widget>
+            <widget class="QWidget" name="tab">
+              <attribute name="title">
+                <string>Tab 1</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                  <widget class="QMdiArea" name="mdiArea">
+                    <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
+                    </property>
+                    <property name="autoFillBackground">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+              </layout>
+            </widget>
+            <widget class="QWidget" name="tab_2">
+              <attribute name="title">
+                <string>Tab 2</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+                <item>
+                  <widget class="QTableView" name="tableView">
+                    <property name="autoFillBackground">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+              </layout>
+            </widget>
+          </widget>
+        </item>
+      </layout>
+    </widget>
+    <widget class="QMenuBar" name="menuBar">
+      <property name="geometry">
+        <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1380</width>
+          <height>22</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QStatusBar" name="statusBar"/>
+  </widget>
+  <layoutdefault spacing="6" margin="11"/>
+  <tabstops>
+    <tabstop>tabWidget</tabstop>
+    <tabstop>tableView</tabstop>
+  </tabstops>
+  <resources/>
+  <connections/>
+</ui>
