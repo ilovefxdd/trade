@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Instruments" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Instruments">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="合约" type="xs:string" />
+                <xs:element name="名称" type="xs:string" minOccurs="0" />
+                <xs:element name="交易所" type="xs:string" minOccurs="0" />
+                <xs:element name="合约数量" type="xs:int" minOccurs="0" />
+                <xs:element name="最小波动" type="xs:double" minOccurs="0" />
+                <xs:element name="保证金-多" type="xs:double" minOccurs="0" />
+                <xs:element name="保证金-空" type="xs:double" minOccurs="0" />
+                <xs:element name="手续费" type="xs:double" minOccurs="0" />
+                <xs:element name="手续费-平仓" type="xs:double" minOccurs="0" />
+                <xs:element name="最大下单量-限" type="xs:int" minOccurs="0" />
+                <xs:element name="最小下单量-限" type="xs:int" minOccurs="0" />
+                <xs:element name="自选" type="xs:boolean" default="false" minOccurs="0" />
+                <xs:element name="套利" type="xs:boolean" default="false" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Instruments" />
+        <xs:field xpath="合约" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+</NewDataSet>

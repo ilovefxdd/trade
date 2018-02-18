@@ -1,0 +1,642 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ats.Indicators</name>
+    </assembly>
+    <members>
+        <member name="T:Ats.Indicators.ATR">
+            <summary>
+            真实波幅
+            True Range
+            取HIGH-LOW、ABS(昨天的收盘价-HIGH)、ABS(昨天的收盘价-LOW)的最大值
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.ATR.#ctor(Ats.Core.BarSeries,System.Int32)">
+            <summary>
+            ATR构造函数
+            </summary>
+            <param name="barlist"></param>
+            <param name="N"></param>
+        </member>
+        <member name="M:Ats.Indicators.ATR.Calculate">
+            <summary>
+            指标核心算法
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.ATR.Ago(System.Int32)">
+            <summary>
+            指标回溯算法
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.ATR.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.ATR.N">
+            <summary>
+            最新值
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.ATR.Item(System.Int32)">
+            <summary>
+            根据索引访问数据
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Ats.Indicators.ATR.Last">
+            <summary>
+            最后一个值
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.ATR.First">
+            <summary>
+            第一个值
+            </summary>
+        </member>
+        <member name="T:Ats.Indicators.KdjValue">
+            <summary>
+            kdj指标类
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.KdjValue.Date">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="T:Ats.Indicators.Bolling">
+            <summary>
+            布林带
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.Bolling.GetBackN(System.Int32)">
+            <summary>
+            对回溯N进行安全性限制
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.Bolling.Ago(System.Int32)">
+            <summary>
+            回溯n个之前的均线
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.Bolling.Mid">
+            <summary>
+            最新均线
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.Bolling.Mid(System.Int32)">
+            <summary>
+            回溯均线
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.Bolling.Up">
+            <summary>
+            最新上沿
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.Bolling.Down">
+            <summary>
+            最新下沿
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.Bolling.Up(System.Int32)">
+            <summary>
+            上沿
+            </summary>
+            <param name="n">回溯n</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.Bolling.Down(System.Int32)">
+            <summary>
+            下沿
+            </summary>
+            <param name="n">回溯n</param>
+            <returns></returns>
+        </member>
+        <member name="P:Ats.Indicators.Bolling.N">
+            <summary>
+            回溯长度
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.Bolling.K">
+            <summary>
+            标准差乘系数
+            </summary>
+        </member>
+        <member name="T:Ats.Indicators.EMA">
+            <summary>
+            指数平均
+            别名EXPMA
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.EMA.GetBackN(System.Int32)">
+            <summary>
+            对回溯N进行安全性限制
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ats.Indicators.KDJ">
+             <summary>
+             参数有：
+            1、N     天数                    Value
+            2、Hn   N天内的最高价     Value
+            3、Ln     N天内的最低价     Value
+            4、Cn     第n天的收盘价     Value
+            5、RSV     (Cn-Ln)/(Hn-Ln)*100     Value
+            
+            结果有：
+            1、Kn     2/3*K(n-1)+1/3*RSVn     List          K1=50
+            2、Dn     2/3*D(n-1)+1/3*Kn          List          D1=50
+            3、Jn     3*Kn-2*Dn                         List    
+             </summary>
+        </member>
+        <member name="F:Ats.Indicators.KDJ._bars">
+            <summary>
+            KDJ是基于K线计算的
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.KDJ.K(System.Int32)">
+            <summary>
+            回溯K
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.KDJ.D(System.Int32)">
+            <summary>
+            回溯D
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.KDJ.J(System.Int32)">
+            <summary>
+            回溯J
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.KDJ.R(System.Int32)">
+            <summary>
+            回溯RSV记录值
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.KDJ.Date(System.Int32)">
+            <summary>
+            回溯时间
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.KDJ.GetRsv(System.Int32)">
+            <summary>
+            计算RSV
+            首先计算N天的最高价和最低价
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.KDJ.Calculate">
+            <summary>
+            OrigBar：指标列表
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.KDJ.N">
+            <summary>
+            周期长度
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.KDJ.Item(System.Int32)">
+            <summary>
+            索引
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ats.Indicators.MA">
+            <summary>
+            均线
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.MA._N">
+            <summary>
+            计算平均值的数据个数
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.MA._bardata">
+            <summary>
+            数据类型,缺省Close
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.MA._curIdx">
+            <summary>
+            当前位置
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.MA.#ctor(Ats.Core.BarSeries,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="barlist">K线</param>
+            <param name="n">均值N</param>
+        </member>
+        <member name="M:Ats.Indicators.MA.#ctor(Ats.Core.BarSeries,Ats.Core.BarData,System.Int32)">
+            <summary>
+            均线构造函数
+            </summary>
+            <param name="barlist">K线</param>
+            <param name="bardata">数据类型</param>
+            <param name="n">均值N</param>
+        </member>
+        <member name="M:Ats.Indicators.MA.Calculate">
+            <summary>
+            指标核心算法
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.MA.Ago(System.Int32)">
+            <summary>
+            指标回溯算法
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.MA.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.MA.N">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.MA.BarData">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.MA.Item(System.Int32)">
+            <summary>
+            根据索引访问数据
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Ats.Indicators.MA.Last">
+            <summary>
+            最后一个值
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.MA.First">
+            <summary>
+            第一个值
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.MACD.DIF(System.Int32)">
+            <summary>
+            回溯DIF
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.MACD.DEA(System.Int32)">
+            <summary>
+            回溯
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Ats.Indicators.MACD.Item(System.Int32)">
+            <summary>
+            索引
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ats.Indicators.RSI">
+            <summary>
+            RSI相对强弱指标
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.RSI._N">
+            <summary>
+            计算平均值的数据个数
+            14天RSI
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.RSI._bars">
+            <summary>
+            TR是基于K线计算的
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.RSI._malist">
+            <summary>
+            基础数据指标数值
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.RSI._curIdx">
+            <summary>
+            当前位置
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.RSI._latestValue">
+            <summary>
+            原始Bar数据的最新值
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.RSI.#ctor(Ats.Core.BarSeries,System.Int32)">
+            <summary>
+            ATR构造函数
+            </summary>
+            <param name="barlist">K线</param> 
+        </member>
+        <member name="M:Ats.Indicators.RSI.FormatHead">
+            <summary>
+            初始化头部的空数据
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.RSI.Calculate">
+            <summary>
+            指标核心算法
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.RSI.UpdateClose(System.Double)">
+            <summary>
+            更新RSI
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.RSI.AddClose(System.Double)">
+            <summary>
+            新增一个数据点
+            </summary>
+            <param name="currV"></param>
+        </member>
+        <member name="M:Ats.Indicators.RSI.CalculateRSI">
+            <summary>
+            计算RSI
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.RSI.GetRSI_Formula(System.Double,System.Double)">
+            <summary>
+            根据上涨和下跌计算RSI
+            </summary>
+            <param name="UpAvg"></param>
+            <param name="DownAvg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.RSI.Ago(System.Int32)">
+            <summary>
+            指标回溯算法
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.RSI.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.RSI.N">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.RSI.Item(System.Int32)">
+            <summary>
+            根据索引访问数据
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Ats.Indicators.RSI.Last">
+            <summary>
+            最后一个值
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.RSI.First">
+            <summary>
+            第一个值
+            </summary>
+        </member>
+        <member name="T:Ats.Indicators.SAR">
+            <summary>
+            SAR指标
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.SAR._bars">
+            <summary>
+            TR是基于K线计算的
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.SAR._malist">
+            <summary>
+            基础数据指标数值
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.SAR.AfStep">
+            <summary>
+            加速因子
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.SAR.AfLimit">
+            <summary>
+            加速因子最大值
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.SAR._B">
+            <summary>
+            最高价
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.SAR._C">
+            <summary>
+            最低价
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.SAR._M">
+            <summary>
+            收盘价
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.SAR._D">
+            <summary>
+            加速因子
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.SAR._E">
+            <summary>
+            价格极值
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.SAR._G">
+            <summary>
+            1多头
+            -1空头
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.SAR._curIdx">
+            <summary>
+            当前位置
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.SAR.#ctor(Ats.Core.BarSeries,System.Double,System.Double)">
+            <summary>
+            SAR构造函数
+            </summary>
+            <param name="barlist">原始数据</param>
+            <param name="Step">加速因子</param>
+            <param name="MaxP">加速因子最大值</param>
+        </member>
+        <member name="M:Ats.Indicators.SAR.Calculate">
+            <summary>
+            指标核心算法
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.SAR.AddBar(Ats.Core.Bar)">
+            <summary>
+            添加一根新的完整的K线
+            </summary>
+            <param name="bar"></param>
+        </member>
+        <member name="M:Ats.Indicators.SAR.Ago(System.Int32)">
+            <summary>
+            指标回溯算法
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.SAR.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.SAR.Data">
+            <summary>
+            SAR的数值
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.SAR.Position">
+            <summary>
+            多空持仓方向
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.SAR.Item(System.Int32)">
+            <summary>
+            根据索引访问数据
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Ats.Indicators.SAR.Last">
+            <summary>
+            最后一个值
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.SAR.First">
+            <summary>
+            第一个值
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.SAR.SarCount">
+            <summary>
+            计算出来的SAR的个数
+            </summary>
+        </member>
+        <member name="T:Ats.Indicators.TR">
+            <summary>
+            真实波幅
+            True Range
+            取HIGH-LOW、ABS(昨天的收盘价-HIGH)、ABS(昨天的收盘价-LOW)的最大值
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.TR._bars">
+            <summary>
+            TR是基于K线计算的
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.TR._malist">
+            <summary>
+            基础数据指标数值
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.TR._curIdx">
+            <summary>
+            当前位置
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.TR._latestValue">
+            <summary>
+            原始Bar数据的最新值
+            </summary>
+        </member>
+        <member name="F:Ats.Indicators.TR.N">
+            <summary>
+            TR振幅只回溯1根
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.TR.#ctor(Ats.Core.BarSeries)">
+            <summary>
+            ATR构造函数
+            </summary>
+            <param name="barlist">K线</param> 
+        </member>
+        <member name="M:Ats.Indicators.TR.Calculate">
+            <summary>
+            指标核心算法
+            </summary>
+        </member>
+        <member name="M:Ats.Indicators.TR.GetTR(Ats.Core.BarSeries,System.Int32)">
+            <summary>
+            计算真实振幅
+            </summary>
+            <param name="data"></param>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.TR.Ago(System.Int32)">
+            <summary>
+            指标回溯算法
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ats.Indicators.TR.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.TR.Item(System.Int32)">
+            <summary>
+            根据索引访问数据
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Ats.Indicators.TR.Last">
+            <summary>
+            最后一个值
+            </summary>
+        </member>
+        <member name="P:Ats.Indicators.TR.First">
+            <summary>
+            第一个值
+            </summary>
+        </member>
+    </members>
+</doc>

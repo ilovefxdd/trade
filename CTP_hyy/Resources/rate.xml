@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Instruments" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Instruments">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="合约" type="xs:string" />
+                <xs:element name="名称" type="xs:string" minOccurs="0" />
+                <xs:element name="交易所" type="xs:string" minOccurs="0" />
+                <xs:element name="合约数量" type="xs:int" minOccurs="0" />
+                <xs:element name="最小波动" type="xs:double" minOccurs="0" />
+                <xs:element name="保证金-多" type="xs:double" minOccurs="0" />
+                <xs:element name="保证金-空" type="xs:double" minOccurs="0" />
+                <xs:element name="手续费" type="xs:double" minOccurs="0" />
+                <xs:element name="最大下单量-限" type="xs:int" minOccurs="0" />
+                <xs:element name="最小下单量-限" type="xs:int" minOccurs="0" />
+                <xs:element name="自选" type="xs:boolean" default="false" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Instruments" />
+        <xs:field xpath="合约" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+   <Instruments>
+    <合约>ru1609</合约>
+    <名称>ru1609</名称>
+    <交易所>SHFE</交易所>
+    <合约数量>10</合约数量>
+    <最小波动>5</最小波动>
+    <保证金-多>0.35</保证金-多>
+    <保证金-空>0.35</保证金-空>
+    <手续费>5</手续费>
+    <最大下单量-限>500</最大下单量-限>
+    <最小下单量-限>1</最小下单量-限>
+    <自选>false</自选>
+  </Instruments>
+  <Instruments>
+    <合约>rb1610</合约>
+    <名称>螺纹钢1610</名称>
+    <交易所>SHFE</交易所>
+    <合约数量>10</合约数量>
+    <最小波动>1</最小波动>
+    <保证金-多>0.2</保证金-多>
+    <保证金-空>0.2</保证金-空>
+    <手续费>5E-05</手续费>
+    <最大下单量-限>500</最大下单量-限>
+    <最小下单量-限>1</最小下单量-限>
+    <自选>false</自选>
+  </Instruments>
+ <Instruments>
+    <合约>c1609</合约>
+    <名称>黄玉米1609</名称>
+    <交易所>SHFE</交易所>
+    <合约数量>10</合约数量>
+    <最小波动>1</最小波动>
+    <保证金-多>0.35</保证金-多>
+    <保证金-空>0.35</保证金-空>
+    <手续费>20</手续费>
+    <最大下单量-限>1000</最大下单量-限>
+    <最小下单量-限>1</最小下单量-限>
+    <自选>false</自选>
+  </Instruments>
+</NewDataSet>
