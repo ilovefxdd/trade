@@ -237,3 +237,6 @@ F:\BaiduYunDownload\plc3id\plc714\plc\obj\Debug\PIVASWork.main.resources
 F:\BaiduYunDownload\plc3id\plc714\plc\obj\Debug\PIVASworker.Properties.Resources.resources
 F:\BaiduYunDownload\plc3id\plc714\plc\obj\Debug\PIVASworker.seting.resources
 F:\BaiduYunDownload\plc3id\plc714\plc\obj\Debug\PIVASworker.csproj.GenerateResource.Cache
+D:\qt_ctp\qtctp\plc\bin\Debug\PIVASworker.exe.config
+D:\qt_ctp\qtctp\plc\obj\Debug\PIVASworker.exe
+D:\qt_ctp\qtctp\plc\obj\Debug\PIVASworker.pdb
