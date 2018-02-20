@@ -8,12 +8,14 @@ from vtObject import *
 import threading  
 import imp
 import csv
+import string
 import multiprocessing
 lock=multiprocessing.Lock()#一个锁
 EMPTY_STRING = ''
 EMPTY_UNICODE = u''
 EMPTY_INT = 0
-jcb={"ru":5;"cu":10;"rb":1;""}
+
+jgb={"IF":0.2,"IC":0.2,"IH":0.2,"TF":0.002,"T":0.002,"ru":5,"cu":10,"ag":1,"au":0.05,"rb":1,"bu":2,"al":5,"zn":5,"pb":5,"fu":1,"hc":2,"wr":1,"ni":10,"sn":10,"j":1,"m":1,"v":5,"p":2,"y":2,"c":1,"bb":0.05,"fb":0.05,"i":0.5,"jd":1,"a":1,"m":1,"l":5,"pp":1,"cs":1,"wh":1,"SR":1,"TA":2,"OI":2,"MA":1,"FG":1,"RS":1,"RM":1,"TC":0.2,"CF":5,"SF":2,"SM":2,"AP":1,"ME":1,"RO":1,"WS":1}
 class readt(object):
     def __init__(self):
 	bars=[]
@@ -37,10 +39,10 @@ def writecsv(bar,filen,tz):
     bcsv.append( bar.date)
     bcsv.append( bar.time[0:5])
     qc=bar.close
-    if (qc !=0):
-	(bae.close-qc()
-    tz=tz+""
-  #  print bcsv
+    #if (qc !=0):
+	#(bae.close-qc()
+    #tz=tz+""
+    print bcsv
     filen.writerow(bcsv)
 def geth(tk,myfile,date):
     try :
@@ -81,7 +83,7 @@ def getp(myfile,tk,date):
       tk.BidPrice1=d10
       tk.AskPrice1=d11
       
-def pretick(tick,barfile,bar,tz,qc):  
+def pretick(tick,barfile,bar,tz):  
     #  print bar.date, tick.vtSymbol,bar.datetime,bar.vtSymbol
       if not bar.vtSymbol:
 		    
@@ -117,7 +119,7 @@ def pretick(tick,barfile,bar,tz,qc):
 	     
 	  #   print bar.open,bar.high,bar.low,bar.close,bar.datetime,bar.volume,bar.openInterest
 	   #  writebar(newBar,barfile) 记录ＢＡＲ
-	     writecsv(newBar,barfile,tz,qc)
+	     writecsv(newBar,barfile,tz)
 	     
 	  else:
 	     bar.high = max(bar.high, tick.LastPrice)
@@ -152,9 +154,10 @@ def protick(filen):
       
     vl=os.path.basename(filen)
     tf,ext= os.path.splitext(filen)  
-    ext=ext[1:3]
-			  
+    ext=ext[1:3]  
     if not(ext=='tk'):
+	return
+    if os.path.getsize(filen)<400000:
 	return
     dirp=tf+'.csv'
     if  os.path.isfile(dirp):
@@ -167,6 +170,9 @@ def protick(filen):
       
       vln,ext= os.path.splitext(vl)  
   #    print filen,vln,vl,dirp,tf
+      jgbs=vln.rstrip(string.digits)
+      zxjg=jgb[jgbs]  
+      print jgbs ,":",zxjg
       tk.vtSymbol=vln
       cm.myfile=open(filen,'rb')
       cm.myfile.seek(0,0)
@@ -182,7 +188,7 @@ def protick(filen):
 	    geth(tk,cm.myfile,cm.date)
 	    getp(cm.myfile,tk,cm.date)
 	    
-	    pretick(tk,barfile,bar,tz,qc)
+	    pretick(tk,barfile,bar,tz)
 	#    print bar.close
 	    i=i+48		    
 	    if (i==lens):
@@ -197,7 +203,7 @@ def getfile(dirpath):
       return list
 
 def main():    
-    list=getfile("f:\\tmp")#("G:\\ticks\\SW_NewTick_201301")
+    list=getfile("f:\\tmp")#("G:\\ticks\\SW_NewTick_201301\\20130104")
    # protick(list[0])
     pool=multiprocessing.Pool(processes=3)#限制并行进程数为3
     pool.map(protick,list)   
