@@ -10,16 +10,22 @@ import imp
 import csv
 import string
 import multiprocessing
+from  mog import *
+
 lock=multiprocessing.Lock()#一个锁
 EMPTY_STRING = ''
 EMPTY_UNICODE = u''
 EMPTY_INT = 0
 
 jgb={"IF":0.2,"IC":0.2,"IH":0.2,"TF":0.002,"T":0.002,"ru":5,"cu":10,"ag":1,"au":0.05,"rb":1,"bu":2,"al":5,"zn":5,"pb":5,"fu":1,"hc":2,"wr":1,"ni":10,"sn":10,"j":1,"m":1,"v":5,"p":2,"y":2,"c":1,"bb":0.05,"fb":0.05,"i":0.5,"jd":1,"a":1,"m":1,"l":5,"pp":1,"cs":1,"wh":1,"SR":1,"TA":2,"OI":2,"MA":1,"FG":1,"RS":1,"RM":1,"TC":0.2,"CF":5,"SF":2,"SM":2,"AP":1,"ME":1,"RO":1,"WS":1}
+mdict={'syb':'','date':'2001','xtz':''}
+
+
 class readt(object):
     def __init__(self):
-	bars=[]
-   
+	self.bars=[]
+	self.qc=0
+	self.tz=''
   	    
     def readbar(self,path):
 	pass
@@ -27,7 +33,7 @@ class readt(object):
 def writebar(bar,filen):
       filen.write(pack("6sffffii4s4s", bar.symbol,bar.open,bar.high,bar.low,bar.close,bar.volume,bar.openInterest,bar.date,bar.time[0:6]))
    #   print bar.close
-def writecsv(bar,filen,tz):
+def writecsv(bar,filen,cm):
     bcsv=[]
     bcsv.append( bar.symbol)
     bcsv.append( bar.open)
@@ -38,12 +44,27 @@ def writecsv(bar,filen,tz):
     bcsv.append( bar.openInterest)
     bcsv.append( bar.date)
     bcsv.append( bar.time[0:5])
-    qc=bar.close
-    #if (qc !=0):
-	#(bae.close-qc()
-    #tz=tz+""
-    print bcsv
+    jgbs=bar.symbol.rstrip(string.digits)
+    print jgds
+    zxjg=jgb[jgbs] 
+    jt=0
+    print cm.qc
+    if cm.qc!=0:
+	jt=(bar.close-cm.qc)/zxjg
+	print bar.close,cm.qc,zxjg
+        print jt
+	if (jt>0):
+	    jt=97+jt
+        if jt==0:
+            jt=48
+        if jt<0:
+	    jt=abs(jt)+65
+	cm.tz=cm.tz+chr(int(jt))
+	print cm.tz
+    bcsv.append(chr(jt)) 
+#    print bcsv
     filen.writerow(bcsv)
+    return 
 def geth(tk,myfile,date):
     try :
 	  h=ord(myfile.read(1))
@@ -83,7 +104,7 @@ def getp(myfile,tk,date):
       tk.BidPrice1=d10
       tk.AskPrice1=d11
       
-def pretick(tick,barfile,bar,tz):  
+def pretick(tick,barfile,bar,cm):  
     #  print bar.date, tick.vtSymbol,bar.datetime,bar.vtSymbol
       if not bar.vtSymbol:
 		    
@@ -119,14 +140,15 @@ def pretick(tick,barfile,bar,tz):
 	     
 	  #   print bar.open,bar.high,bar.low,bar.close,bar.datetime,bar.volume,bar.openInterest
 	   #  writebar(newBar,barfile) 记录ＢＡＲ
-	     writecsv(newBar,barfile,tz)
-	     
+	     writecsv(newBar,barfile,cm)
+	     cm.qc=bar.close
 	  else:
 	     bar.high = max(bar.high, tick.LastPrice)
 	     bar.low = min(bar.low, tick.LastPrice)
 	     bar.volume = tick.Volume
 	     bar.openInterest = tick.OpenInterest   
-	   #  print	bar.close ,tick.LastPrice	
+	   #  print	bar.close ,tick.LastPrice
+      return 
 def gethead(myfile,cm):
       s=myfile.read(8)
       (y)=unpack("h",myfile.read(2))
@@ -157,7 +179,7 @@ def protick(filen):
     ext=ext[1:3]  
     if not(ext=='tk'):
 	return
-    if os.path.getsize(filen)<400000:
+    if os.path.getsize(filen)<600000:
 	return
     dirp=tf+'.csv'
     if  os.path.isfile(dirp):
@@ -169,10 +191,8 @@ def protick(filen):
       tk=VtTickData()
       
       vln,ext= os.path.splitext(vl)  
-  #    print filen,vln,vl,dirp,tf
-      jgbs=vln.rstrip(string.digits)
-      zxjg=jgb[jgbs]  
-      print jgbs ,":",zxjg
+
+     # print jgbs ,":",zxjg
       tk.vtSymbol=vln
       cm.myfile=open(filen,'rb')
       cm.myfile.seek(0,0)
@@ -182,17 +202,31 @@ def protick(filen):
       gethead(cm.myfile,cm)
       i=76
       bar=VtBarData()
-      tz=""
-      qc=0
+      cm.tz=''
+      cm.qc=0
+      
       while (True):      
 	    geth(tk,cm.myfile,cm.date)
 	    getp(cm.myfile,tk,cm.date)
 	    
-	    pretick(tk,barfile,bar,tz)
+	    pretick(tk,barfile,bar,cm)
 	#    print bar.close
 	    i=i+48		    
 	    if (i==lens):
 		  f.close()
+		  dbClient = MongoClient("localhost",27017)
+		  mdict['syb']=vln
+		  mdict['date']=cm.date
+		  mdict['xtz']=cm.tz
+		  dbName='m1_db'
+		  db = dbClient[dbName]
+		  collectionName='m1_col'
+		  collection = db[collectionName]
+		  collection.insert(mdict)  		  	  
+		  
+		 
+		  dbClient.close
+		  
 		  break   	   		      
 def getfile(dirpath): 
       list=[]
@@ -203,9 +237,9 @@ def getfile(dirpath):
       return list
 
 def main():    
-    list=getfile("f:\\tmp")#("G:\\ticks\\SW_NewTick_201301\\20130104")
-   # protick(list[0])
-    pool=multiprocessing.Pool(processes=3)#限制并行进程数为3
+    list=getfile("G:\\ticks\\SW_NewTick_201301\\20130104")
+  #  protick(list[0])
+    pool=multiprocessing.Pool(processes=33)#限制并行进程数为3
     pool.map(protick,list)   
      
 if __name__ == '__main__':
