@@ -1,4 +1,4 @@
-#coding:utf-8
+# -*- coding: UTF-8 -*-
 from struct import *
 from datetime import datetime, timedelta
 import os  
@@ -17,8 +17,8 @@ EMPTY_STRING = ''
 EMPTY_UNICODE = u''
 EMPTY_INT = 0
 
-jgb={"IF":0.2,"IC":0.2,"IH":0.2,"TF":0.002,"T":0.002,"ru":5,"cu":10,"ag":1,"au":0.05,"rb":1,"bu":2,"al":5,"zn":5,"pb":5,"fu":1,"hc":2,"wr":1,"ni":10,"sn":10,"j":1,"m":1,"v":5,"p":2,"y":2,"c":1,"bb":0.05,"fb":0.05,"i":0.5,"jd":1,"a":1,"m":1,"l":5,"pp":1,"cs":1,"wh":1,"SR":1,"TA":2,"OI":2,"MA":1,"FG":1,"RS":1,"RM":1,"TC":0.2,"CF":5,"SF":2,"SM":2,"AP":1,"ME":1,"RO":1,"WS":1}
-mdict={'syb':'','date':'2001','xtz':''}
+jgb={"IF":1,"IC":1,"IH":1,"TF":1,"T":1,"ru":5,"cu":10,"ag":1,"au":0.05,"rb":1,"bu":2,"al":5,"zn":5,"pb":5,"fu":1,"hc":2,"wr":1,"ni":10,"sn":10,"j":1,"m":1,"v":5,"p":2,"y":2,"c":1,"bb":1,"fb":0.05,"i":0.5,"jd":1,"a":1,"m":1,"l":5,"pp":1,"cs":1,"wh":1,"SR":1,"TA":2,"OI":2,"MA":1,"FG":1,"RS":1,"RM":1,"TC":0.2,"CF":5,"SF":2,"SM":2,"AP":1,"ME":1,"RO":1,"WS":1,'jm':0.5}
+mdict={'_id':10,'syb':'','date':'2001','xtz':''}
 
 
 class readt(object):
@@ -45,23 +45,31 @@ def writecsv(bar,filen,cm):
     bcsv.append( bar.date)
     bcsv.append( bar.time[0:5])
     jgbs=bar.symbol.rstrip(string.digits)
-    print jgds
     zxjg=jgb[jgbs] 
     jt=0
-    print cm.qc
+    ct=0
+  #  print cm.qc
     if cm.qc!=0:
 	jt=(bar.close-cm.qc)/zxjg
-	print bar.close,cm.qc,zxjg
-        print jt
-	if (jt>0):
-	    jt=97+jt
-        if jt==0:
-            jt=48
-        if jt<0:
-	    jt=abs(jt)+65
-	cm.tz=cm.tz+chr(int(jt))
-	print cm.tz
-    bcsv.append(chr(jt)) 
+	#print bar.close,cm.qc,zxjg
+        #print jt
+	if (26>jt>0 ):
+	    ct=96+jt
+	else :
+	    if (jt>26):
+	      ct=120
+	    else :
+		if jt==0:
+		   ct=48
+		else:
+		    if -26<jt<0:
+			ct=abs(jt)+64
+		    else:
+			if jt<-26:
+			    ct=90
+	cm.tz=cm.tz+chr(int(ct))
+#	print cm.tz
+    bcsv.append(chr(int(ct)) )
 #    print bcsv
     filen.writerow(bcsv)
     return 
@@ -141,7 +149,7 @@ def pretick(tick,barfile,bar,cm):
 	  #   print bar.open,bar.high,bar.low,bar.close,bar.datetime,bar.volume,bar.openInterest
 	   #  writebar(newBar,barfile) 记录ＢＡＲ
 	     writecsv(newBar,barfile,cm)
-	     cm.qc=bar.close
+	     cm.qc=newBar.close
 	  else:
 	     bar.high = max(bar.high, tick.LastPrice)
 	     bar.low = min(bar.low, tick.LastPrice)
@@ -213,20 +221,22 @@ def protick(filen):
 	#    print bar.close
 	    i=i+48		    
 	    if (i==lens):
+		
 		  f.close()
-		  dbClient = MongoClient("localhost",27017)
-		  mdict['syb']=vln
-		  mdict['date']=cm.date
-		  mdict['xtz']=cm.tz
-		  dbName='m1_db'
-		  db = dbClient[dbName]
-		  collectionName='m1_col'
-		  collection = db[collectionName]
-		  collection.insert(mdict)  		  	  
-		  
-		 
-		  dbClient.close
-		  
+		  try:  
+		    dbClient = MongoClient("localhost",27017,connectTimeoutMS=500)
+		    mdict['syb']=vln
+		    mdict['date']=cm.date
+		    mdict['xtz']=cm.tz
+		    mdict['_id']=vln+cm.date+tk.time
+		    dbName='m1_db'
+		    db = dbClient[dbName]
+		    collectionName='m1_col'
+		    collection = db[collectionName]
+		    collection.insert_one(mdict)  		  	  	 
+		    dbClient.close
+		  except ConnectionFailure:
+		    pass		  
 		  break   	   		      
 def getfile(dirpath): 
       list=[]
@@ -234,13 +244,16 @@ def getfile(dirpath):
 	    for filen in files:
 		  pathf= os.path.join(root,filen)
 		  list.append(pathf)
+		#  protick(pathf)             
+		  #time.sleep(2)
       return list
 
 def main():    
-    list=getfile("G:\\ticks\\SW_NewTick_201301\\20130104")
+    list=getfile("G:\\ticks")
   #  protick(list[0])
-    pool=multiprocessing.Pool(processes=33)#限制并行进程数为3
+    pool=multiprocessing.Pool(processes=5)#限制并行进程数为3
     pool.map(protick,list)   
+   # getfile("G:\\ticks")
      
 if __name__ == '__main__':
     main()
