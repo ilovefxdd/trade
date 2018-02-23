@@ -1,7 +1,7 @@
 # encoding: UTF-8
 from pymongo import MongoClient, ASCENDING
 from pymongo.errors import ConnectionFailure
-
+import csv
 class Cmong(object):
 	"""docstring for ClassName"""
 
@@ -61,11 +61,16 @@ class Cmong(object):
     #----------------------------------------------------------------------
 def main():
 	cm =Cmong()
-	d = {'xtz':{'$regex' : ".*aAc0BbA.*"}}
+	d = {'syb':{'$regex' : 'ru[0-9]{3,4}'}}
 	cm.dbConnect() 
 	data=cm.dbQuery('m1_db', 'm1_col', d)
-	print data
-		  
+	f=file('e:\\tick\\zxb.csv','wb')
+	barfile=csv.writer(f)
+	for row in data :
+	   b=[]	
+	   b.append(row['xtz'])
+	   barfile.writerow(b)
+	f.close()	  
 	
 if __name__ == '__main__':
     main()
