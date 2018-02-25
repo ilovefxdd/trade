@@ -68,8 +68,9 @@ def main():
 	barfile=csv.writer(f)
 	for row in data :
 	   b=[]	
+	   print row
 	   b.append(row['xtz'])
-	   barfile.writerow(b)
+	  # barfile.writerow(b)
 	f.close()	  
 	
 if __name__ == '__main__':

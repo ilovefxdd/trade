@@ -18,7 +18,7 @@ EMPTY_UNICODE = u''
 EMPTY_INT = 0
 
 jgb={"IF":1,"IC":1,"IH":1,"TF":1,"T":1,"ru":5,"cu":10,"ag":1,"au":0.05,"rb":1,"bu":2,"al":5,"zn":5,"pb":5,"fu":1,"hc":2,"wr":1,"ni":10,"sn":10,"j":1,"m":1,"v":5,"p":2,"y":2,"c":1,"bb":1,"fb":0.05,"i":0.5,"jd":1,"a":1,"m":1,"l":5,"pp":1,"cs":1,"wh":1,"SR":1,"TA":2,"OI":2,"MA":1,"FG":1,"RS":1,"RM":1,"TC":0.2,"CF":5,"SF":2,"SM":2,"AP":1,"ME":1,"RO":1,"WS":1,'jm':0.5}
-mdict={'_id':10,'syb':'','date':'2001','xtz':''}
+mdict={'_id':10,'syb':'','date':'2001','xtz':'','bar':{'open':0,'high':0,'low':0,'close':0,'vol':0,'openin':0}}
 
 
 class readt(object):
@@ -68,9 +68,9 @@ def writecsv(bar,filen,cm):
 			if jt<-26:
 			    ct=90
 	cm.tz=cm.tz+chr(int(ct))
-#	print cm.tz
+	#print cm.tz
     bcsv.append(chr(int(ct)) )
-#    print bcsv
+   # print bcsv
     filen.writerow(bcsv)
     return 
 def geth(tk,myfile,date):
@@ -167,7 +167,7 @@ def gethead(myfile,cm):
       ds=str(d)[1:3]
       (d1,d2,d3,d4,d5,d6,d7)=unpack("iiiiiii",myfile.read(4+4+4+4+4+4+4))
       LastPrice = d6/1000        # 今日开盘价
-				   
+      cm.open=LastPrice			   
       cm.openInterest =d4          # 持仓量	  
       cm.preClosePrice =d4/1000
 				 
@@ -187,7 +187,7 @@ def protick(filen):
     ext=ext[1:3]  
     if not(ext=='tk'):
 	return
-    if os.path.getsize(filen)<600000:
+    if os.path.getsize(filen)<1000000:
 	return
     dirp=tf+'.csv'
     if  os.path.isfile(dirp):
@@ -229,6 +229,12 @@ def protick(filen):
 		    mdict['date']=cm.date
 		    mdict['xtz']=cm.tz
 		    mdict['_id']=vln+cm.date+tk.time
+		    mdict['bar']['open']=cm.open
+		    mdict['bar']['high']=tk.HighestPrice
+		    mdict['bar']['low']=tk.LowestPrice
+		    mdict['bar']['close']=tk.LastPrice
+		    mdict['bar']['vol']=tk.Volume
+		    mdict['bar']['openin']=tk.OpenInterest
 		    dbName='m1_db'
 		    db = dbClient[dbName]
 		    collectionName='m1_col'
