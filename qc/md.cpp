@@ -26,6 +26,7 @@ void MdSpi::OnFrontConnected(){
 	strcpy(loginField->UserID, NULL_STR.toLatin1());
 	strcpy(loginField->Password, NULL_STR.toLatin1());
 
+
 	mdapi->ReqUserLogin(loginField, loginRequestID);
 	qDebug() << "logining.....";
 }
@@ -251,8 +252,8 @@ void Pzid::of_p(char *pzid)
 		id[i] = pzid[i];
 	}
 	id[7] = '\0';
-	t_Path = "D:/DATA/tik";
-	b_Path = "D:/DATA/1m";
+	t_Path = "d:/DATA/tik";
+	b_Path = "d:/DATA/1m";
 	QDir kDir;
 
 	QTime t = QTime::currentTime();

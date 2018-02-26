@@ -42,9 +42,6 @@ ui(new Ui::MainWindow)
 	policy.setHorizontalPolicy(QSizePolicy::Maximum);
 	kw->show();
 
-
-
-
 	//	model->setHeaderData(1, Qt::Horizontal, QString::fromLocal8Bit(""));
 	ui->tableView->setModel(model);
 
@@ -55,8 +52,9 @@ ui(new Ui::MainWindow)
 	ui->tableView->setColumnWidth(0, 101);
 	ui->tableView->setColumnWidth(1, 102);
 
-	ls << "rb1805" << "ru1805" << "zn1802" << "al1802" << "ni1805";
-	for (int i = 0; i < 5; i++)
+	ls << "ru1805" << "rb1805" << "zn1804" << "al1804" << "ni1805" << "ru1809" << "zn1803" << "al1803" << "cu1804" << "cu1803" << "RM805" << "CF805" << "j1805" <<
+		"ni1809" << "p1805" << "y1805" << "SR805" << "MA805" << "bu1805" << "ZC805";
+	for (int i = 0; i < 20; i++)
 	{
 		model->setItem(i, 0, new QStandardItem(ls[i]));// ui->tw->item(i, 0)->text()));
 		for (int c = 1; c < 7; c++)
@@ -88,7 +86,7 @@ void MainWindow::mSlot(CThostFtdcDepthMarketDataField* tep)
 {
 	//double zxj, mj, mj;
 	//	int vol, zc;
-	for (int it = 0; it < 5; it++)
+	for (int it = 0; it < 20; it++)
 	if (tep->InstrumentID == ls[it])//ui-tableView->indexAt(QPoint(it, 0)).data())
 	{
 

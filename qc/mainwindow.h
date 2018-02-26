@@ -9,8 +9,6 @@
 #include <QList>
 #include <QHeaderView>
 #include "kwidget.h"
-
-
 namespace Ui {
 	class MainWindow;
 }
